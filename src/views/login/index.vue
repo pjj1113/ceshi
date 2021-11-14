@@ -44,7 +44,11 @@ export default {
         if (!Number.isInteger(value)) {
           callback();
         } else {
-          callback();
+          if (value < 18) {
+            callback(new Error("必须年满18岁"));
+          } else {
+            callback();
+          }
         }
       }, 1000);
     };

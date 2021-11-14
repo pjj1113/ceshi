@@ -29,8 +29,8 @@ class TMap {
       "SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=cia&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles" +
       "&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}" +
       "&tk=ae735d13cbec178839eb32925ca76e7c";
-    const lay = new T.TileLayer(imageURL, { minZoom: 10, maxZoom: 18 });
-    const lay2 = new T.TileLayer(imageURLT, { minZoom: 10, maxZoom: 18 });
+    const lay = new T.TileLayer(imageURL, { minZoom: 6, maxZoom: 18 });
+    const lay2 = new T.TileLayer(imageURLT, { minZoom: 6, maxZoom: 18 });
     const config = { layers: [lay, lay2] };
     this.map = new T.Map(el, config);
 
